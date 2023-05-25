@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Nina Kun](https://up.htmlacademy.ru/htmlcss/37/user/1765393).
-* Наставник: [Анна Лисененкова] (https://htmlacademy.ru/profile/ankhena).
+* Наставник: [Анна Лисененкова](https://up.htmlacademy.ru/htmlcss/37/user/85590).
 
 ---
 
