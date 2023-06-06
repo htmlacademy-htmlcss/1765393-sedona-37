@@ -12,7 +12,7 @@
     <!-- Шапка -->
 
 
-    <header class="page-header">
+    <header class="page-header" data-test="header">
       <nav class="page-navigation">
         <ul class="navigation-list">
 
@@ -69,7 +69,7 @@
     <!-- Основная страница -->
 
 
-    <main class="main-inner">
+    <main class="main-inner" data-test="main">
       <header class="inner-header">
         <h1 class="inner-header-title">Гостиницы Седоны</h1>
 
@@ -91,7 +91,7 @@
       </header>
 
       <!-- Фильтр -->
-      <section class="filter-section">
+      <section class="filter-section" data-test="filter">
         <h2 class="visually-hidden">Фильтры для поиска гостиниц</h2>
         <form class="filter-form" action="https://echo.htmlacademy.ru/" method="get">
 
@@ -131,21 +131,21 @@
 
               <li class="filter-item filter-item-radio">
                 <label class="control">
-                  <input class="control-input сontrol-input-checkbox" type="radio" name="hotel" value="housing" checked>
+                  <input class="control-input сontrol-input-checkbox" type="radio" name="housing" value="hotel" checked>
                   Гостиница
                 </label>
               </li>
 
               <li class="filter-item filter-item-radio">
                 <label class="control">
-                  <input class="control-input сontrol-input-checkbox" type="radio" name="motel" value="housing">
+                  <input class="control-input сontrol-input-checkbox" type="radio" name="housing" value="motel">
                   Мотель
                 </label>
               </li>
 
               <li class="filter-item filter-item-radio">
                 <label class="control">
-                  <input class="control-input сontrol-input-checkbox" type="radio" name="apartments" value="housing">
+                  <input class="control-input сontrol-input-checkbox" type="radio" name="housing" value="apartments">
                   Апартаменты
                 </label>
               </li>
@@ -176,7 +176,7 @@
       </section>
 
       <!-- Каталог -->
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <h2>Найдено гостиниц: 38</h2>
 
         <!-- Сортировка-->
@@ -294,7 +294,7 @@
       </section>
 
       <!-- Подписка -->
-      <section class="subscribe">
+      <section class="subscribe" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-content">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -308,7 +308,7 @@
     <!-- Подвал -->
 
 
-    <footer class="page-footer">
+    <footer class="page-footer" data-test="footer">
 
       <!-- Соц.сети -->
       <section class="footer-social">
