@@ -59,7 +59,7 @@ body {
 .welcome {
   color: #000;
   background-color: #fff;
-  background-image: url("../images/foto/catalog/welcome.svg"), url("../images/foto/background/background-1.jpg");
+  background-image: url("../images/foto/background/background-1.jpg");
   /* 1 страница */
   background-size: 100%, cover;
   background-position: bottom, center;
