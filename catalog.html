@@ -4,10 +4,11 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог Гостиниц</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
+    <div class="page-container">
 
 
     <!-- Шапка -->
@@ -59,7 +60,7 @@
 
           <!-- ХОЧУ СЮДА! -->
           <li class="navigation-item">
-            <a class="button navigation-link" href="#">Хочу сюда!</a>
+            <a class="button button-header navigation-link" href="#">Хочу сюда!</a>
           </li>
 
         </ul>
@@ -72,7 +73,7 @@
 
     <main class="main-inner" data-test="main">
       <div class="main-div">
-        <h1 class="div-inner-title">Гостиницы Седоны</h1>
+        <h1 class="title-common div-inner-title">Гостиницы Седоны</h1>
 
         <!-- Хлебные крошки -->
         <ul class="breadcrumbs-list">
@@ -129,7 +130,7 @@
 
                 <li class="filter-item filter-item-radio">
                   <label class="control">
-                    <input class="control-input сontrol-input-checkbox" type="radio" name="housing" value="hotel"
+                    <input class="input control-input сontrol-input-checkbox" type="radio" name="housing" value="hotel"
                       checked>
                     Гостиница
                   </label>
@@ -137,14 +138,14 @@
 
                 <li class="filter-item filter-item-radio">
                   <label class="control">
-                    <input class="control-input сontrol-input-checkbox" type="radio" name="housing" value="motel">
+                    <input class="input control-input сontrol-input-checkbox" type="radio" name="housing" value="motel">
                     Мотель
                   </label>
                 </li>
 
                 <li class="filter-item filter-item-radio">
                   <label class="control">
-                    <input class="control-input сontrol-input-checkbox" type="radio" name="housing" value="apartments">
+                    <input class="input control-input сontrol-input-checkbox" type="radio" name="housing" value="apartments">
                     Апартаменты
                   </label>
                 </li>
@@ -157,13 +158,13 @@
               <legend class="filter-group filter-group-price">Стоимость, ₽</legend>
 
               <label class="control">
-                <span class="filter-span">от</span>
-                <input class="filter-input filter-input-price-from" type="number" name="price-from" placeholder="0">
+                <span class="filter-span filter-price">от</span>
+                <input class="input filter-input filter-price filter-input-price-from" type="number" name="price-from" placeholder="0">
               </label>
 
               <label class="control">
-                <span class="filter-span">до</span>
-                <input class="filter-input filter-input-price-to" type="number" name="price-to" placeholder="9000">
+                <span class="filter-span filter-price">до</span>
+                <input class="input filter-input filter-price filter-input-price-to" type="number" name="price-to" placeholder="9000">
               </label>
             </fieldset>
 
@@ -177,7 +178,7 @@
 
       <!-- Каталог -->
       <section class="catalog" data-test="catalog">
-        <h2>Найдено гостиниц: 38</h2>
+        <h2 class="title-common hotel-all">Найдено гостиниц: 38</h2>
 
         <!-- Сортировка-->
         <select class="catalog-select" name="select-sort" aria-label="Сортировка">
@@ -298,24 +299,24 @@
             <a class="catalog-pagination-link catalog-pagination-link-current">1</a>
           </li>
           <li class="catalog-pagination-item catalog-pagination-item-off">
-            <a class="atalog-pagination-linkk" href="#">2</a>
+            <a class="catalog-pagination-link" href="#">2</a>
           </li>
           <li class="catalog-pagination-item catalog-pagination-item-off">
-            <a class="atalog-pagination-link" href="#">3</a>
+            <a class="catalog-pagination-link" href="#">3</a>
           </li>
           <li class="catalog-pagination-item catalog-pagination-item-off">
-            <a class="atalog-pagination-link" href="#">4</a>
+            <a class="catalog-pagination-link" href="#">4</a>
           </li>
           <li class="catalog-pagination-item catalog-pagination-item-off pagination-catalog-item-points">...</li>
           <li class="catalog-pagination-item catalog-pagination-item-off">
-            <a class="atalog-pagination-link" href="#">10</a>
+            <a class="catalog-pagination-link" href="#">10</a>
           </li>
         </ul>
       </section>
 
       <!-- Подписка -->
-      <section class="subscribe" data-test="subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
+      <section class="subscribe-black" data-test="subscribe">
+        <h2 class="title-common">Подпишитесь на рассылку</h2>
         <p class="subscribe-content">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="subscribe-label">
@@ -378,6 +379,7 @@
       </section>
 
     </footer>
+  </div>
   </body>
 
 </html>
