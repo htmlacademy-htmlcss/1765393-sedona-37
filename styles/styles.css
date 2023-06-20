@@ -64,6 +64,9 @@ body {
   background-repeat: no-repeat;
   background-position: bottom, center;
 }
+.welcome-img {
+  background-position: bottom, center;
+}
 
 /* List/ ul */
 
