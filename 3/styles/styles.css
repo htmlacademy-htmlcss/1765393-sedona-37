@@ -62,6 +62,7 @@ body {
   background-color: #fff;
   background-size: 100%, cover;
   background-repeat: no-repeat;
+  background-position: bottom, center;
 }
 
 /* List/ ul */
