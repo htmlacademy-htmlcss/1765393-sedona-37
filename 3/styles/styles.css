@@ -63,6 +63,9 @@ body {
   background-color: #fff;
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: bottom, center;
+  background-repeat: no-repeat;
+  background-size: 100% auto, cover;
 }
 
 /* List/ ul */
