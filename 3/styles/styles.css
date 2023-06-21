@@ -106,7 +106,7 @@ body {
   color: inherit;
 }
 
-.subscribe-black {
+.subscribe-colorfull {
   color: #000;
   text-align: center;
 }
@@ -148,7 +148,7 @@ body {
   line-height: 36px;
 }
 
-catalog-title {
+.catalog-title {
   font-size: 24px;
   line-height: 28px;
   color: #000;
@@ -192,10 +192,9 @@ catalog-title {
 
 /* Background */
 
-.advantages-div {
+.advantages-item-img {
   color: #fff;
   background-color: #82B3D3;
-  /* 1 страница */
 }
 
 .advantages-item-center {
@@ -211,7 +210,6 @@ catalog-title {
   color: #fff;
   background-color: #82B3D3;
   background-image: url("../images/foto/background/background-2.jpg");
-  /* 1 страница */
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -219,7 +217,6 @@ catalog-title {
 
 .main-div {
   background-image: url("../images/foto/background/background-filter.jpg");
-  /* 2 страница */
   color: #fff;
   background-color: #82B3D3;
   background-repeat: no-repeat;
@@ -264,9 +261,6 @@ catalog-title {
 .catalog-button-favorite-on {
   background-color: #7DB54F;
 }
-
-
-
 
 /* Input */
 
