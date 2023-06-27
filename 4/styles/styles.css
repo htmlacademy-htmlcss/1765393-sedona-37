@@ -1,0 +1,379 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+body {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  color: #333333;
+  background-color: #F2F2F2;
+  min-width: 1200px;
+  height: 100%;
+}
+
+.page-container {
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+}
+
+/* Header */
+
+.page-header {
+  color: #000;
+  background-color: #fff;
+}
+
+.page-navigation {
+  display: flex;
+  margin: 0 auto;
+
+  /* list-style: none;  - доджно убирать тоочки из списка - пока не работает!? */
+}
+
+.navigation-list {
+  width: 432px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+  /* принудительное наследование от родителя */
+  font-weight: 700;
+  text-align: center;
+  /* центрирование текста в блоке */
+  background-color: #fff;
+  text-decoration: none;
+  /* none - отмена подчеркивания ссылок */
+  text-transform: capitalize;
+  /* capitalize - прописные буквы / uppercase - заглавные буквы */
+}
+
+/* Main */
+
+.welcome {
+  background-image: url("../images/foto/background/background-1.jpg");
+  color: #000;
+  background-color: #fff;
+  background-size: 100%, cover;
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+  text-align: center;
+}
+
+.welcome-img {
+  background-position: bottom, center;
+  display: block;
+  /* Logo должно быть в середине!!!! */
+  margin: 0 auto;
+}
+
+/* List/ ul */
+
+.advantages-list {
+  text-align: center;
+}
+
+/* Title */
+
+.title-common {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* capitalize - прописные буквы / uppercase - заглавные буквы */
+  color: #000;
+  text-align: center;
+}
+
+.advantages,
+.recommendations {
+  text-align: center;
+}
+
+.advantages-white {
+  color: #fff;
+}
+
+.advantages-title-h2,
+.recommendations-title-h2,
+.interested-title {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.subscribe-title {
+  color: inherit;
+}
+
+.subscribe-colorfull {
+  color: #000;
+  text-align: center;
+}
+
+.interested {
+  text-align: center;
+  min-height: 406px;
+}
+
+.interested-content {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.subscribe-content {
+  color: #333333;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.div-inner-title {
+  font-size: 60px;
+  line-height: 78px;
+  text-transform: capitalize;
+  /* capitalize - прописные буквы / uppercase - заглавные буквы */
+  color: inherit;
+}
+
+.filter-price {
+  color: #000;
+  text-align: right;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.hotel-all {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.catalog-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+}
+
+.breadcrumbs-link-text {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.filter-group {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.сontrol-input-checkbox {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.catalog-rating {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.catalog-pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  background: #82B3D3;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.catalog-pagination-link-current {
+  background-color: #F2F2F2;
+  color: #000;
+}
+
+/* Advantages */
+.advantages {
+  display: flex;
+  margin: 0 auto;
+}
+
+.advantages-item {
+  width: 400px;
+  padding: 103px 85px;
+}
+
+/* Background */
+
+.advantages-item-img {
+  color: #fff;
+  background-color: #82B3D3;
+}
+
+.advantages-item-center {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-side,
+.recommendations-item-opaque {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.subscribe-background {
+  color: #fff;
+  background-image: url("../images/foto/background/background-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe {
+  min-height: 415px;
+  background-color: #82B3D3;
+  text-align: center;
+  padding: 96px 258px 104px;
+}
+
+.main-div {
+  background-image: url("../images/foto/background/background-filter.jpg");
+  color: #fff;
+  background-color: #82B3D3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px 70px 70px;
+}
+
+/* Button */
+
+.button {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #756157;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 8px 50px;
+  display: inline-block;
+}
+
+.subscribe-button {
+  background-color: #82B3D3;
+  font-size: 20px;
+  line-height: 36px;
+}
+
+.filter-button-apply {
+  background-color: #82B3D3;
+}
+
+.filter-button-reset {
+  background-color: none;
+}
+
+.catalog-button-favorite-off {
+  background-color: #82B3D3;
+
+}
+
+.catalog-button-favorite-on {
+  background-color: #7DB54F;
+}
+
+.catalog-item {
+  width: 340px;
+  height: 438px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-button-more {
+  margin-right: 20px;
+
+}
+
+.header-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Input */
+
+.input {
+  font-family: inherit;
+}
+
+.subscribe-input {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* Flex */
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.padding-container {
+  padding: 50px 70px 60px;
+}
+
+/* Подвал */
+
+.footer-contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+}
+
+.footer-social-link {
+  color: #fff;
+  background-color: #83B3D3;
+}
