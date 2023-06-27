@@ -14,6 +14,20 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
 body {
   margin: 0;
   font-family: "PT Sans", sans-serif;
@@ -21,7 +35,8 @@ body {
   line-height: 21px;
   color: #333333;
   background-color: #F2F2F2;
-  min-width: 1280px;
+  min-width: 1200px;
+  height: 100%;
 }
 
 .page-container {
@@ -29,6 +44,10 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
 }
 
 /* Header */
@@ -37,6 +56,22 @@ body {
   color: #000;
   background-color: #fff;
 }
+
+.page-navigation {
+  display: flex;
+  margin: 0 auto;
+
+  /* list-style: none;  - доджно убирать тоочки из списка - пока не работает!? */
+}
+
+.navigation-list {
+  width: 432px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+}
+
+
 
 .navigation-link {
   font-size: 20px;
@@ -51,7 +86,6 @@ body {
   /* none - отмена подчеркивания ссылок */
   text-transform: capitalize;
   /* capitalize - прописные буквы / uppercase - заглавные буквы */
-
 }
 
 /* Main */
@@ -63,9 +97,14 @@ body {
   background-size: 100%, cover;
   background-repeat: no-repeat;
   background-position: bottom, center;
+  text-align: center;
 }
+
 .welcome-img {
   background-position: bottom, center;
+  display: block;
+  /* Logo должно быть в середине!!!! */
+  margin: 0 auto;
 }
 
 /* List/ ul */
@@ -113,6 +152,7 @@ body {
 
 .interested {
   text-align: center;
+  min-height: 406px;
 }
 
 .interested-content {
@@ -190,6 +230,17 @@ body {
   color: #000;
 }
 
+/* Advantages */
+.advantages {
+  display: flex;
+  margin: 0 auto;
+}
+
+.advantages-item {
+  width: 400px;
+  padding: 103px 85px;
+}
+
 /* Background */
 
 .advantages-item-img {
@@ -208,11 +259,16 @@ body {
 
 .subscribe-background {
   color: #fff;
-  background-color: #82B3D3;
   background-image: url("../images/foto/background/background-2.jpg");
-  text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.subscribe {
+  min-height: 415px;
+  background-color: #82B3D3;
+  text-align: center;
+  padding: 96px 258px 104px;
 }
 
 .main-div {
@@ -221,6 +277,7 @@ body {
   background-color: #82B3D3;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 35px 70px 70px;
 }
 
 /* Button */
@@ -236,8 +293,8 @@ body {
   background-color: #756157;
   text-decoration: none;
   border-radius: 4px;
-  width: 140px;
-  height: 36px;
+  padding: 8px 50px;
+  display: inline-block;
 }
 
 .subscribe-button {
@@ -256,10 +313,30 @@ body {
 
 .catalog-button-favorite-off {
   background-color: #82B3D3;
+
 }
 
 .catalog-button-favorite-on {
   background-color: #7DB54F;
+}
+
+.catalog-item {
+  width: 340px;
+  height: 438px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-button-more {
+  margin-right: 20px;
+
+}
+
+.header-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 /* Input */
@@ -272,6 +349,16 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+}
+
+/* Flex */
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.padding-container {
+  padding: 50px 70px 60px;
 }
 
 /* Подвал */

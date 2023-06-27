@@ -70,8 +70,7 @@
 
     <!-- Основная страница -->
 
-
-    <main class="main-inner" data-test="main">
+    <main class="main-container main-inner" data-test="main">
       <div class="main-div">
         <h1 class="title-common div-inner-title">Гостиницы Седоны</h1>
 
@@ -155,7 +154,7 @@
 
             <!-- Стоимость -->
             <fieldset class="filter-title">
-              <legend class="filter-group filter-group-price">Стоимость, ₽</legend>
+              <legend class="filter-group filter-group-price">Стоимость, ₽:</legend>
 
               <label class="control">
                 <span class="filter-span filter-price">от</span>
@@ -176,8 +175,11 @@
         </section>
       </div>
 
+<div class="padding-container">
       <!-- Каталог -->
       <section class="catalog" data-test="catalog">
+
+        <div class="header-catalog">
         <h2 class="title-common hotel-all">Найдено гостиниц: 38</h2>
 
         <!-- Сортировка-->
@@ -205,6 +207,7 @@
             </a>
           </li>
         </ul>
+      </div>
 
         <!-- Список гостиниц-->
         <ul class="catalog-list">
@@ -315,7 +318,7 @@
       </section>
 
       <!-- Подписка -->
-      <section class="subscribe-colorfull" data-test="subscribe">
+      <section class="subscribe subscribe-colorfull" data-test="subscribe">
         <h2 class="title-common">Подпишитесь на рассылку</h2>
         <p class="subscribe-content">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -379,6 +382,7 @@
       </section>
 
     </footer>
+  </div>
   </div>
   </body>
 
