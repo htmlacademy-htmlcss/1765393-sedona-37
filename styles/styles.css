@@ -24,8 +24,15 @@ html {
   box-sizing: border-box;
 }
 
-.main-container {
-  flex-grow: 1;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 body {
@@ -47,70 +54,10 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-
 }
 
-/* Header */
-
-.page-header {
-  color: #000;
-  background-color: #fff;
-}
-
-.page-navigation {
-  display: flex;
-  margin: 0 auto;
-
-  /* list-style: none;  - доджно убирать тоочки из списка - пока не работает!? */
-}
-
-.navigation-list {
-  width: 432px;
-  margin: 0;
-  padding: 0;
-  justify-content: space-between;
-}
-
-
-
-.navigation-link {
-  font-size: 20px;
-  line-height: 24px;
-  color: inherit;
-  /* принудительное наследование от родителя */
-  font-weight: 700;
-  text-align: center;
-  /* центрирование текста в блоке */
-  background-color: #fff;
-  text-decoration: none;
-  /* none - отмена подчеркивания ссылок */
-  text-transform: capitalize;
-  /* capitalize - прописные буквы / uppercase - заглавные буквы */
-}
-
-/* Main */
-
-.welcome {
-  background-image: url("../images/foto/background/background-1.jpg");
-  color: #000;
-  background-color: #fff;
-  background-size: 100%, cover;
-  background-repeat: no-repeat;
-  background-position: bottom, center;
-  text-align: center;
-}
-
-.welcome-img {
-  background-position: bottom, center;
-  display: block;
-  /* Logo должно быть в середине!!!! */
-  margin: 0 auto;
-}
-
-/* List/ ul */
-
-.advantages-list {
-  text-align: center;
+.main-container {
+  flex-grow: 1;
 }
 
 /* Title */
@@ -123,6 +70,7 @@ body {
   /* capitalize - прописные буквы / uppercase - заглавные буквы */
   color: #000;
   text-align: center;
+  margin: 0;
 }
 
 .advantages,
@@ -134,11 +82,17 @@ body {
   color: #fff;
 }
 
+.advantages-item-content {
+  margin: 0;
+  padding-top: 60px;
+}
+
 .advantages-title-h2,
 .recommendations-title-h2,
 .interested-title {
   font-size: 30px;
   line-height: 36px;
+  margin: 0;
 }
 
 .subscribe-title {
@@ -148,17 +102,6 @@ body {
 .subscribe-colorfull {
   color: #000;
   text-align: center;
-}
-
-.interested {
-  text-align: center;
-  min-height: 406px;
-}
-
-.interested-content {
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
 }
 
 .subscribe-content {
@@ -215,71 +158,6 @@ body {
   line-height: 20px;
 }
 
-.catalog-pagination-link {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
-  background: #82B3D3;
-  border-radius: 4px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.catalog-pagination-link-current {
-  background-color: #F2F2F2;
-  color: #000;
-}
-
-/* Advantages */
-.advantages {
-  display: flex;
-  margin: 0 auto;
-}
-
-.advantages-item {
-  width: 400px;
-  padding: 103px 85px;
-}
-
-/* Background */
-
-.advantages-item-img {
-  color: #fff;
-  background-color: #82B3D3;
-}
-
-.advantages-item-center {
-  background-color: rgba(131, 179, 211, 0.2);
-}
-
-.advantages-item-side,
-.recommendations-item-opaque {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.subscribe-background {
-  color: #fff;
-  background-image: url("../images/foto/background/background-2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.subscribe {
-  min-height: 415px;
-  background-color: #82B3D3;
-  text-align: center;
-  padding: 96px 258px 104px;
-}
-
-.main-div {
-  background-image: url("../images/foto/background/background-filter.jpg");
-  color: #fff;
-  background-color: #82B3D3;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 35px 70px 70px;
-}
-
 /* Button */
 
 .button {
@@ -297,52 +175,272 @@ body {
   display: inline-block;
 }
 
-.subscribe-button {
-  background-color: #82B3D3;
-  font-size: 20px;
-  line-height: 36px;
-}
-
-.filter-button-apply {
-  background-color: #82B3D3;
-}
-
-.filter-button-reset {
-  background-color: none;
-}
-
-.catalog-button-favorite-off {
-  background-color: #82B3D3;
-
-}
-
-.catalog-button-favorite-on {
-  background-color: #7DB54F;
-}
-
-.catalog-item {
-  width: 340px;
-  height: 438px;
-  padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.catalog-button-more {
-  margin-right: 20px;
-
-}
-
-.header-catalog {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 /* Input */
 
 .input {
   font-family: inherit;
+}
+
+
+/* Header */
+
+
+.page-header {
+  color: #000;
+  background-color: #fff;
+}
+
+.page-navigation {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 auto;
+  list-style-type: none; /* Убирает точки из списка */
+}
+
+.navigation-list,
+.navigation-list-user {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* list-style-type: none; убрать комментарии после добавления иконок */
+}
+
+.navigation-list {
+  min-width: 340px;
+  margin-right: auto;
+  list-style-type: none; /* удалить после добавления иконок, тк будет в общем св */
+}
+
+.navigation-list-user {
+  justify-content: flex-end;
+  min-width: 88px;
+  margin: 0 20px;
+}
+
+.navigation-link-current {
+  text-decoration: underline;
+}
+
+.navigation-link {
+  font-size: 20px;
+  line-height: 24px;
+  color: inherit;
+  /* принудительное наследование от родителя */
+  font-weight: 700;
+  text-align: center;
+  /* центрирование текста в блоке */
+  background-color: #fff;
+  text-decoration: none;
+  /* none - отмена подчеркивания ссылок */
+  text-transform: capitalize;
+  /* capitalize - прописные буквы / uppercase - заглавные буквы */
+  display: block;
+  padding: 14px 10px;
+}
+
+.page-header-logo {
+  display: block;
+}
+
+.navigation-link-logo {
+  margin-right: 28px;
+}
+
+.navigation-item {
+  padding: 6px; /* уточнить*/
+}
+
+.navigation-item-user {
+  min-width: 44px;
+  height: 64px;
+  padding: 6px 4px; /* уточнить*/
+}
+
+.navigation-link-user {
+  display: flex;
+  height: 100%;
+  text-decoration: none;
+}
+
+.navigation-link-user-favorite {
+  display: grid;
+}
+
+.navigation-div-button {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 240px;
+  column-gap: 14px;
+  flex-shrink: 0;
+}
+
+.navigation-button {
+  width: 160px;
+  margin: 14px 0;
+}
+
+
+/* Main-1 */
+
+
+/* Welcome */
+
+.welcome {
+  background-image: url("../images/foto/background/background-1.jpg");
+  color: #000;
+  background-color: #fff;
+  background-size: 100%, cover;
+  background-repeat: no-repeat;
+  background-position: bottom, center;
+  text-align: center;
+}
+
+.welcome-img {
+  background-position: bottom, center;
+  display: block;
+  /* Logo должно быть в середине!!!! */
+  margin: 0 auto;
+}
+
+/* Advantages */
+
+.advantages {
+  padding-top: 69px;
+ }
+
+.advantages-list,
+.recommendations-list {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  grid-auto-flow: dense;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages-div {
+  width: 400;
+  min-height: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 103px 85px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.advantages-item-img {
+  color: #fff;
+  background-color: #82B3D3;
+  display: flex;
+  flex-wrap: wrap;
+  grid-column: span 3;
+  vertical-align: middle; /* убирает полосу заливки под фото - почему не работает? */
+}
+
+.advantages-item-shop,
+.advantages-item-devil_bridge {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.advantages-item-img-revers {
+  flex-direction: row-reverse;
+}
+
+ .advantages-item-center {
+   background-color: rgba(131, 179, 211, 0.2);
+ }
+
+ .advantages-item-side,
+ .recommendations-item-opaque {
+   background-color: rgba(131, 179, 211, 0.12);
+ }
+
+ .advantages-content {
+  margin-bottom: 90px; /* 21+69 */
+ }
+
+ .advantages-div-wrapper {
+  width: calc(100% / 3);
+  min-height: 385px;
+ }
+
+/* Recommendations */
+
+.recommendations-title-h2 {
+  margin-top: 64px;
+  margin-bottom: 20px;
+}
+
+.recommendations-content {
+  margin-bottom: 64px;
+}
+
+.recommendations-item {
+  width: 400px;
+  min-height: 385px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.recommendations-title {
+  margin: 30px;
+}
+
+.recommendations-item-content {
+  margin-bottom: 80px;
+  vertical-align: bottom;
+}
+
+.recommendations-item-housing {
+  background-image: url(../images/icons/other/recommendations-house.svg);
+  background-repeat: no-repeat;
+  display: block;
+  margin: auto;
+}
+
+/* Interested */
+
+.interested {
+  text-align: center;
+  min-height: 406px;
+  padding: 96px 304px;
+}
+
+.interested-content {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 54px;
+}
+
+/* Subscribe */
+
+.subscribe-background {
+  color: #fff;
+  background-image: url("../images/foto/background/background-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.subscribe {
+  min-height: 415px;
+  background-color: #82B3D3;
+  text-align: center;
+  padding: 96px 258px 104px;
+}
+
+.subscribe-button {
+  background-color: #82B3D3;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 .subscribe-input {
@@ -351,17 +449,9 @@ body {
   line-height: 24px;
 }
 
-/* Flex */
-.catalog-list {
-  display: flex;
-  flex-wrap: wrap;
-}
 
-.padding-container {
-  padding: 50px 70px 60px;
-}
+/* Footer */
 
-/* Подвал */
 
 .footer-contacts-phone {
   font-size: 40px;
@@ -376,4 +466,118 @@ body {
 .footer-social-link {
   color: #fff;
   background-color: #83B3D3;
+}
+
+/* Main-2 */
+
+.main-div {
+  background-image: url("../images/foto/background/background-filter.jpg");
+  color: #fff;
+  background-color: #82B3D3;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 35px 70px 70px;
+}
+
+/* Breadcrumbs */
+
+/* Filter */
+
+.filter-button-apply {
+  background-color: #82B3D3;
+}
+
+.filter-button-reset {
+  background-color: none;
+}
+
+/* Padding-container */
+
+.padding-container {
+  padding: 50px 70px 60px;
+}
+
+/* Catalog */
+
+.header-catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.catalog-button-favorite-off {
+  background-color: #82B3D3;
+}
+
+.catalog-button-favorite-on {
+  background-color: #7DB54F;
+}
+
+.catalog-button-more {
+  margin-right: 20px;
+}
+
+.catalog-item {
+  width: 340px;
+  height: 438px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 80px;
+}
+
+.catalog-img {
+  max-width: 100%;
+  height: auto;
+} /* чтобы картинка не вываливалась */
+
+/* Pagination */
+
+.pagination-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  background: #82B3D3;
+  border-radius: 4px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 60px;
+  height: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0 12px;
+  box-sizing: border-box;
+}
+
+.pagination-link-current {
+  background-color: #F2F2F2;
+  color: #000;
+}
+
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 22px;
+  line-height: 26px;
+  gap: 8px;
+}
+
+.pagination-item-points {
+  color: #000;
+  background-color: #fff;
 }

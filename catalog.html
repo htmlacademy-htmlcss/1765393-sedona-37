@@ -18,7 +18,7 @@
       <nav class="page-navigation">
 
         <!-- Logo -->
-        <a class="navigation-link" href="index.html" aria-label="Главная страница.">
+        <a class="navigation-link-logo" href="index.html" aria-label="Главная страница.">
           <img class="page-header-logo" src="images/icons/other/logo.svg" width="140" height="70"
             alt="Логотип сайта города Седоны.">
         </a>
@@ -41,29 +41,29 @@
           </li>
 
         </ul>
-        <ul class="navigation-list navigation-user">
+        <ul class="navigation-list-user">
 
           <!-- Поиск -->
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-item-user">
+            <a class="navigation-link-user navigation-link-user-search" href="#">
               <span class="visually-hidden">Поиск</span>
             </a>
           </li>
 
           <!-- В избранном -->
-          <li class="navigation-item">
-            <a class="navigation-link" href="#">
+          <li class="navigation-item-user">
+            <a class="navigation-link-user navigation-link-user-favorite" href="#">
               <span class="visually-hidden">Отелей в избранном:</span>
-              <span class="user-vaforites">12</span>
+              <span class="user-favorite">12</span>
             </a>
           </li>
+        </ul>
 
           <!-- ХОЧУ СЮДА! -->
-          <li class="navigation-item">
-            <a class="button button-header navigation-link" href="#">Хочу сюда!</a>
-          </li>
+          <div class="nnavigation-div-button">
+            <a class="button navigation-button button-header" href="#">Хочу сюда!</a>
+          </div>
 
-        </ul>
       </nav>
     </header>
 
@@ -175,7 +175,6 @@
         </section>
       </div>
 
-<div class="padding-container">
       <!-- Каталог -->
       <section class="catalog" data-test="catalog">
 
@@ -297,22 +296,22 @@
         </ul>
 
         <!-- Страницы-->
-        <ul class="catalog-pagination-list">
-          <li class="catalog-pagination-item catalog-pagination-item-on">
-            <a class="catalog-pagination-link catalog-pagination-link-current">1</a>
+        <ul class="pagination-list">
+          <li class="pagination-item pagination-item-on">
+            <a class="pagination-link pagination-link-current">1</a>
           </li>
-          <li class="catalog-pagination-item catalog-pagination-item-off">
-            <a class="catalog-pagination-link" href="#">2</a>
+          <li class="pagination-item pagination-item-off">
+            <a class="pagination-link" href="#">2</a>
           </li>
-          <li class="catalog-pagination-item catalog-pagination-item-off">
-            <a class="catalog-pagination-link" href="#">3</a>
+          <li class="pagination-item pagination-item-off">
+            <a class="pagination-link" href="#">3</a>
           </li>
-          <li class="catalog-pagination-item catalog-pagination-item-off">
-            <a class="catalog-pagination-link" href="#">4</a>
+          <li class="pagination-item pagination-item-off">
+            <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="catalog-pagination-item catalog-pagination-item-off pagination-catalog-item-points">...</li>
-          <li class="catalog-pagination-item catalog-pagination-item-off">
-            <a class="catalog-pagination-link" href="#">10</a>
+          <li class="pagination-link pagination-item pagination-item-off pagination-item-points">...</li>
+          <li class="pagination-item pagination-item-off">
+            <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
       </section>
@@ -382,7 +381,6 @@
       </section>
 
     </footer>
-  </div>
   </div>
   </body>
 
