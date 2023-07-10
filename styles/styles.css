@@ -67,7 +67,6 @@ body {
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
-  /* capitalize - прописные буквы / uppercase - заглавные буквы */
   color: #000;
   text-align: center;
   margin: 0;
@@ -97,11 +96,13 @@ body {
 
 .subscribe-title {
   color: inherit;
+  font-size: 30px;
+  line-height: 36px;
 }
 
 .subscribe-colorfull {
   color: #000;
-  text-align: center;
+  background-color: #fff;
 }
 
 .subscribe-content {
@@ -110,11 +111,16 @@ body {
   line-height: 24px;
 }
 
+.subscribe-content-text {
+  color: inherit;
+  font-size: 22px;
+  line-height: 26px;
+}
+
 .div-inner-title {
   font-size: 60px;
   line-height: 78px;
   text-transform: capitalize;
-  /* capitalize - прописные буквы / uppercase - заглавные буквы */
   color: inherit;
 }
 
@@ -193,7 +199,8 @@ body {
 .page-navigation {
   display: flex;
   align-items: flex-start;
-  margin: 0 auto;
+  margin: 0 70px;
+  height: 64px;
   list-style-type: none; /* Убирает точки из списка */
 }
 
@@ -203,13 +210,12 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  /* list-style-type: none; убрать комментарии после добавления иконок */
+  list-style-type: none;
 }
 
 .navigation-list {
   min-width: 340px;
   margin-right: auto;
-  list-style-type: none; /* удалить после добавления иконок, тк будет в общем св */
 }
 
 .navigation-list-user {
@@ -219,17 +225,15 @@ body {
 }
 
 .navigation-link-current {
-  text-decoration: underline;
+  text-decoration: underline; /* не работает */
 }
 
 .navigation-link {
   font-size: 20px;
   line-height: 24px;
   color: inherit;
-  /* принудительное наследование от родителя */
   font-weight: 700;
   text-align: center;
-  /* центрирование текста в блоке */
   background-color: #fff;
   text-decoration: none;
   /* none - отмена подчеркивания ссылок */
@@ -245,16 +249,17 @@ body {
 
 .navigation-link-logo {
   margin-right: 28px;
+  margin-bottom: -6px;
 }
 
 .navigation-item {
-  padding: 6px; /* уточнить*/
+  padding: 6px;
 }
 
 .navigation-item-user {
   min-width: 44px;
   height: 64px;
-  padding: 6px 4px; /* уточнить*/
+  padding: 6px 4px;
 }
 
 .navigation-link-user {
@@ -265,6 +270,10 @@ body {
 
 .navigation-link-user-favorite {
   display: grid;
+  color: #fff;
+  font-size: 10px;
+  line-height: 10px;
+  text-align: center;
 }
 
 .navigation-div-button {
@@ -276,10 +285,21 @@ body {
 }
 
 .navigation-button {
-  width: 160px;
-  margin: 14px 0;
+  min-width: 160px;
+  height: 36px;
+  margin: 14px auto;
+  padding: 8px;
 }
 
+.navigation-link-user-search {
+  background-image: url(../images/icons/other/search.svg);
+  background-repeat: no-repeat;
+}
+
+.navigation-link-user-favorite {
+  background-image: url(../images/icons/other/heart.svg), url(../images/icons/other/circle.svg);
+  background-repeat: no-repeat;
+}
 
 /* Main-1 */
 
@@ -294,13 +314,13 @@ body {
   background-repeat: no-repeat;
   background-position: bottom, center;
   text-align: center;
+  height: 485px;
 }
 
 .welcome-img {
-  background-position: bottom, center;
-  display: block;
-  /* Logo должно быть в середине!!!! */
-  margin: 0 auto;
+  background-position: center;
+  display: inline-block;
+  margin: 51px;
 }
 
 /* Advantages */
@@ -322,8 +342,6 @@ body {
 }
 
 .advantages-div {
-  width: 400;
-  min-height: 385px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -338,7 +356,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   grid-column: span 3;
-  vertical-align: middle; /* убирает полосу заливки под фото - почему не работает? */
+  vertical-align: middle; /* убирает полосу заливки под фото */
 }
 
 .advantages-item-shop,
@@ -363,6 +381,7 @@ body {
 
  .advantages-content {
   margin-bottom: 90px; /* 21+69 */
+  margin-top: 25px;
  }
 
  .advantages-div-wrapper {
@@ -386,22 +405,38 @@ body {
   min-height: 385px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  padding: 75px 84px;
 }
 
 .recommendations-title {
-  margin: 30px;
+  margin-top: 103px;
 }
 
 .recommendations-item-content {
-  margin-bottom: 80px;
   vertical-align: bottom;
 }
 
 .recommendations-item-housing {
   background-image: url(../images/icons/other/recommendations-house.svg);
   background-repeat: no-repeat;
+  background-position: center 80px;
+  display: block;
+  margin: auto;
+}
+
+.recommendations-item-food {
+  background-image: url(../images/icons/other/recommendations-food.svg);
+  background-repeat: no-repeat;
+  background-position: center 80px;
+  display: block;
+  margin: auto;
+}
+
+.recommendations-item-souvenirs {
+  background-image: url(../images/icons/other/recommendations-souvenirs.svg);
+  background-repeat: no-repeat;
+  background-position: center 80px;
   display: block;
   margin: auto;
 }
@@ -419,6 +454,13 @@ body {
   font-size: 22px;
   line-height: 26px;
   margin-bottom: 54px;
+  margin-top: 20px;
+}
+
+.interested-button {
+  min-width: 376px;
+  font-size: 20px;
+  line-height: 36px;
 }
 
 /* Subscribe */
@@ -432,26 +474,45 @@ body {
 
 .subscribe {
   min-height: 415px;
-  background-color: #82B3D3;
   text-align: center;
-  padding: 96px 258px 104px;
+  padding: 96px 258px;
 }
 
 .subscribe-button {
   background-color: #82B3D3;
   font-size: 20px;
   line-height: 36px;
+  border-radius: 0 4px 4px 0;
+  border: 1px;
 }
 
 .subscribe-input {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
+  min-width: 452px;
+  padding: 14px 20px;
+  border-radius: 4px 0 0 4px;
+  border: 1px;
+  background-color: #F2F2F2;
+  color: #000;
+}
+
+.subscribe-form {
+  display: flex;
+  margin: 54px 0 0;
 }
 
 
 /* Footer */
 
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 70px;
+  min-height: 120px;
+}
 
 .footer-contacts-phone {
   font-size: 40px;
@@ -463,9 +524,46 @@ body {
   text-align: center;
 }
 
+.footer-social,
+.footer-contacts,
+.footer-logo-html
+ {
+  margin: 10px 0 0;
+}
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  row-gap: 10px; /* интервал между рядами */
+  max-width: 284px; /* 47,3px*6 */
+  list-style-type: none;
+  padding: 0;
+}
+
 .footer-social-link {
-  color: #fff;
-  background-color: #83B3D3;
+  color: #000;
+  background-color: #fff;
+  display: flex;
+  width: 50px;
+  height: 40px;
+  padding: 0 10px;
+  align-items: flex-start;
+  background-position: center;
+}
+
+.footer-social-link-vk {
+  background-image: url(../images/icons/social-icons/social-vk.svg);
+  background-repeat: no-repeat;
+}
+
+.footer-social-link-telegram {
+  background-image: url(../images/icons/social-icons/social-telegram.svg);
+  background-repeat: no-repeat;
+}
+
+.footer-social-link-youtube {
+  background-image: url(../images/icons/social-icons/social-youtube.svg);
+  background-repeat: no-repeat;
 }
 
 /* Main-2 */
@@ -488,7 +586,7 @@ body {
 }
 
 .filter-button-reset {
-  background-color: none;
+  background: none;
 }
 
 /* Padding-container */
@@ -499,46 +597,172 @@ body {
 
 /* Catalog */
 
+.catalog {
+  margin: 50px 70px 60px;
+}
+
 .header-catalog {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.catalog-select {
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 14px 20px;
+  font-size: 18px;
+  line-height: 21px;
+  font-family: inherit;
+  display: flex;
+  width: 292px;
+  font-weight: 400;
+}
+
+.view-group-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  list-style-type: none;
+  gap: 8px;
+  align-self: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.view-group-item {
+  padding: 14px 12px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+  width: 48px;
+  height: 48px;
+}
+
+.view-group-item-select {
+  border: 2px solid #000;
+}
+
+.button-sort {
+  background-color: red; /* поменять на белый */
+  background-repeat: no-repeat;
+}
+
+.button-sort-card {
+  background-image: url(../images/icons/view-page/view-page-1.svg);
+}
+
+.button-sort-slider {
+  background-image: url(../images/icons/view-page/view-page-2.svg);
+}
+
+.button-sort-list {
+  background-image: url(../images/icons/view-page/view-page-3.svg);
+}
+
+.catalog-card-price {
+  text-align: right;
+  margin: 0;
+}
+
+.catalog-card-name {
+  margin: 0;
 }
 
 .catalog-button-favorite-off {
   background-color: #82B3D3;
+  min-width: 140px;
+  padding: 8px;
+  border: 1px;
 }
 
 .catalog-button-favorite-on {
   background-color: #7DB54F;
+  min-width: 140px;
+  padding: 8px;
+  border: 1px;
 }
 
 .catalog-button-more {
   margin-right: 20px;
+  min-width: 140px;
+  padding: 8px;
 }
 
 .catalog-item {
-  width: 340px;
-  height: 438px;
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  gap: 16px 20px;
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  width: 340px;
+  grid-template-rows: 212px 1fr;
 }
 
 .catalog-list {
   display: grid;
   grid-template-columns: repeat(3, 340px);
   gap: 20px;
-  list-style: none;
-  margin: 0;
+  list-style-type: none;
+  margin: 0 0 80px;
   padding: 0;
-  margin-bottom: 80px;
 }
 
 .catalog-img {
-  max-width: 100%;
-  height: auto;
-} /* чтобы картинка не вываливалась */
+  display: block;
+  width: 300px;
+  object-fit: contain;
+  grid-column: 2 span;
+}
+
+.catalog-title {
+  margin: 0;
+  grid-column: 2 span;
+}
+
+.catalog-rating {
+  margin: 0;
+  border-radius: 4px;
+  background-color: #F2F2F2;
+  max-width: 140px;
+  height: 37px;
+  text-align: center;
+  padding: 8px;
+  text-transform: uppercase;
+}
+
+
+/* Stars */
+
+.stars {
+  height: 17px;
+  row-gap: 6px;
+  margin: 0;
+  background-image: url(../images/icons/other/star.svg);
+  background-repeat: repeat-x;
+}
+
+.star-5 {
+  width: calc(5*18px);
+}
+
+.star-4 {
+  width: calc(4*18px);
+}
+
+.star-3 {
+  width: calc(3*18px);
+}
+
+.star-2 {
+  width: calc(2*18px);
+}
+
+.star-1 {
+  width: calc(1*18px);
+}
 
 /* Pagination */
 
@@ -580,4 +804,7 @@ body {
 .pagination-item-points {
   color: #000;
   background-color: #fff;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
 }
