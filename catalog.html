@@ -102,23 +102,21 @@
 
                   <li class="filter-item filter-item-square">
                     <label class="control check">
-                      <input class="control-input check-input сontrol-input-checkbox" type="checkbox" name="pool"
-                        checked>
+                      <input class="control-input" type="checkbox" name="pool" checked>
                       Бассейн
                     </label>
                   </li>
 
                   <li class="filter-item filter-item-square">
-                    <label class="control check">
-                      <input class="control-input check-input сontrol-input-checkbox" type="checkbox" name="parking"
-                        checked>
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="parking" checked>
                       Парковка
                     </label>
                   </li>
 
                   <li class="filter-item filter-item-square">
-                    <label class="control check">
-                      <input class="control-input check-input сontrol-input-checkbox" type="checkbox" name="Wi-Fi">
+                    <label class="control">
+                      <input class="control-input" type="checkbox" name="Wi-Fi">
                       Wi-Fi
                     </label>
                   </li>
@@ -128,29 +126,26 @@
 
               <!-- Тип жилья -->
               <fieldset class="filter-title">
-                <legend class="filter-group filter-group-housing">Тип Жилья:</legend>
-                <ul class="filter-list filter-list-round">
+                <legend class="filter-group">Тип Жилья:</legend>
+                <ul class="filter-list">
 
-                  <li class="filter-item filter-item-radio">
-                    <label class="control radio">
-                      <input class="input radio-input control-input сontrol-input-checkbox" type="radio" name="housing"
-                        value="hotel" checked>
+                  <li class="filter-item">
+                    <label class="control">
+                      <input class="input radio-input control-input" type="radio" name="housing" value="hotel" checked>
                       Гостиница
                     </label>
                   </li>
 
-                  <li class="filter-item filter-item-radio">
-                    <label class="control radio">
-                      <input class="input radio-input control-input сontrol-input-checkbox" type="radio" name="housing"
-                        value="motel">
+                  <li class="filter-item">
+                    <label class="control">
+                      <input class="input radio-input control-input" type="radio" name="housing" value="motel">
                       Мотель
                     </label>
                   </li>
 
-                  <li class="filter-item filter-item-radio">
-                    <label class="control radio">
-                      <input class="input radio-input control-input сontrol-input-checkbox" type="radio" name="housing"
-                        value="apartments">
+                  <li class="filter-item">
+                    <label class="control">
+                      <input class="input radio-input control-input" type="radio" name="housing" value="apartments">
                       Апартаменты
                     </label>
                   </li>
@@ -159,23 +154,39 @@
               </fieldset>
 
               <!-- Стоимость -->
-              <fieldset class="filter-title">
-                <legend class="filter-group filter-group-price">Стоимость, ₽:</legend>
+              <div class="price-div">
+                <fieldset class="filter-title">
+                  <legend class="filter-group filter-group-price">Стоимость, ₽:</legend>
 
-                <div class="range-wrapper-inputs">
-                  <label class="control control-from">
-                    <span class="filter-price">от</span>
-                    <input class="input filter-input filter-price filter-input-price-from" type="number"
-                      name="price-from" value="0" placeholder="0">
-                  </label>
+                  <div class="range-wrapper-inputs">
+                    <label class="control control-from">
+                      <span class="filter-price">от</span>
+                      <input class="input filter-input filter-price filter-input-price-from" type="number"
+                        name="price-from" value="0" placeholder="0">
+                    </label>
 
-                  <label class="control control-before">
-                    <span class="filter-price">до</span>
-                    <input class="input filter-input filter-price filter-input-price-to" type="number" name="price-to"
-                      value="9000" placeholder="9000">
-                  </label>
-                </div>
-              </fieldset>
+                    <label class="control control-before">
+                      <span class="filter-price">до</span>
+                      <input class="input filter-input filter-price filter-input-price-to" type="number" name="price-to"
+                        value="9000" placeholder="9000">
+                    </label>
+                  </div>
+
+                  <!-- Range-slider -->
+
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 10px; width: 207px">
+                      <button type="button" class="range-toggle toggle-min">
+                        <span class="visually-hidden">Изменить минимальную цену</span>
+                      </button>
+                      <button type="button" class="range-toggle toggle-max">
+                        <span class="visually-hidden">Изменить максимальную цену</span>
+                      </button>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </div>
 
               <fieldset class="filter-title">
                 <button class="button filter-button filter-button-apply" type="submit">Применить</button>
@@ -191,40 +202,40 @@
           <div class="header-catalog">
             <h2 class="title-common hotel-all">Найдено гостиниц: 38</h2>
 
-            <!-- Сортировка-->
+            <!-- Сортировка -->
             <select class="catalog-select" name="select-sort" aria-label="Сортировка">
               <option value="cheap" selected>Сначала дешевые</option>
               <option value="expensive">Сначала дорогие</option>
               <option value="popular">Сначала популярные</option>
             </select>
 
-            <!-- Сортировка вида-->
+            <!-- Сортировка вида -->
             <ul class="view-group-list">
               <li class="view-group-item view-group-item-select">
-                <a class="button button-sort button-sort-card" href="#">
+                <a class="button-sort button-sort-card" href="#">
                   <span class="visually-hidden">Показать карточки</span>
                 </a>
               </li>
               <li class="view-group-item">
-                <a class="button button-sort button-sort-slider" href="#">
+                <a class="button-sort button-sort-slider" href="#">
                   <span class="visually-hidden">Показать развернуто</span>
                 </a>
               </li>
               <li class="view-group-item">
-                <a class="button button-sort button-sort-list" href="#">
+                <a class="button-sort button-sort-list" href="#">
                   <span class="visually-hidden">Показать список</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          <!-- Список гостиниц-->
+          <!-- Список гостиниц -->
           <ul class="catalog-list">
 
-            <!-- 1-->
+            <!--1-->
             <li class="catalog-item">
               <a class="catalog-item-link" href="#">
-                <img class="catalog-img" src="images/foto/catalog/hotel-1.jpg" width="300" height="212"
+                <img class="catalog-img" src="images/photo/catalog/hotel-1.jpg" width="300" height="212"
                   alt="Невероятный вид на звездное небо.">
               </a>
               <h3 class="catalog-title">Amara Resort & Spa</h3>
@@ -237,15 +248,15 @@
               <p class="stars star-4">
                 <span class="visually-hidden">4 звезды</span>
               </p>
-              <p class="catalog-rating"> <!-- rating -->
+              <p class="catalog-rating">
                 Рейтинг: 8,5
               </p>
             </li>
 
-            <!-- 2-->
+            <!--2-->
             <li class="catalog-item">
               <a class="catalog-item-link" href="#">
-                <img class="catalog-img" src="images/foto/catalog/hotel-2.jpg" width="300" height="212"
+                <img class="catalog-img" src="images/photo/catalog/hotel-2.jpg" width="300" height="212"
                   alt="Вид на горы с радугой.">
               </a>
               <h3 class="catalog-title">Villas at Poco Diablo</h3>
@@ -263,10 +274,10 @@
               </p>
             </li>
 
-            <!-- 3-->
+            <!--3-->
             <li class="catalog-item">
               <a class="catalog-item-link" href="#">
-                <img class="catalog-img" src="images/foto/catalog/hotel-3.jpg" width="300" height="212"
+                <img class="catalog-img" src="images/photo/catalog/hotel-3.jpg" width="300" height="212"
                   alt="Горная вершина.">
               </a>
               <h3 class="catalog-title">Desert Quail Inn</h3>
@@ -284,10 +295,10 @@
               </p>
             </li>
 
-            <!-- 4-->
+            <!--4-->
             <li class="catalog-item">
               <a class="catalog-item-link" href="#">
-                <img class="catalog-img" src="images/foto/catalog/hotel-4.jpg" width="300" height="212"
+                <img class="catalog-img" src="images/photo/catalog/hotel-4.jpg" width="300" height="212"
                   alt="Ночное небо и горы.">
               </a>
               <h3 class="catalog-title">GreenTree Inn</h3>
@@ -306,7 +317,7 @@
             </li>
           </ul>
 
-          <!-- Страницы-->
+          <!-- Страницы -->
           <ul class="pagination-list">
             <li class="pagination-item pagination-item-on">
               <a class="pagination-link pagination-link-current">1</a>
@@ -328,7 +339,7 @@
         </section>
 
         <!-- Подписка -->
-        <section class="subscribe subscribe-colorfull" data-test="subscribe">
+        <section class="subscribe subscribe-colorful" data-test="subscribe">
           <h2 class="title-common subscribe-title">Подпишитесь на рассылку</h2>
           <p class="subscribe-content subscribe-content-text">Только полезная информация и никакого спама,<br>честное
             бойскаутское!</p>
@@ -378,7 +389,7 @@
         <!-- Телефон -->
         <section class="footer-contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <address class="footer-contacts-adress">
+          <address class="footer-contacts-address">
             <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </address>
         </section>

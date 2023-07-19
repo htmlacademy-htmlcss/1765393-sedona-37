@@ -78,7 +78,7 @@
         <!-- Добро пожаловать -->
         <section class="welcome" data-test="hero">
           <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
-          <img class="welcome-img" src="images/foto/catalog/welcome.svg" width="458" height="352"
+          <img class="welcome-img" src="images/photo/catalog/welcome.svg" width="458" height="352"
             alt="Welcome to the gorgeous Sedona." lang="en">
         </section>
 
@@ -94,11 +94,11 @@
             <li class="advantages-item advantages-item-img">
               <div class="advantages-div advantages-div-wrapper">
                 <h3 class="title-common advantages-title advantages-white advantages-line">Настоящий городок</h3>
-                <p class="advantages-item-content advantages-white">Седона - не аттракцион для туристов, там течёт
+                <p class="advantages-item-content advantages-white">Седона - не&nbsp;аттракцион для туристов, там течёт
                   своя жизнь</p>
               </div>
               <div class="advantages-wrapper">
-                <img class="advantages-item-shop" src="images/foto/catalog/advantages-1.jpg" width="800" height="385"
+                <img class="advantages-item-shop" src="images/photo/catalog/advantages-1.jpg" width="800" height="385"
                   alt="Магазин на фоне флагов.">
               </div>
             </li>
@@ -106,7 +106,7 @@
             <!--2-->
             <li class="advantages-item advantages-item-side">
               <div class="advantages-div">
-                <h3 class="title-common advantages-title advantages-black">Небольшая площадь</h3>
+                <h3 class="title-common advantages-title advantages-black-h3">Небольшая площадь</h3>
                 <p class="advantages-item-content advantages-black">Все достопримечательности находятся очень близко</p>
               </div>
             </li>
@@ -114,7 +114,7 @@
             <!--3-->
             <li class="advantages-item advantages-item-center">
               <div class="advantages-div">
-                <h3 class="title-common advantages-title advantages-black">Красивая<br>дорога</h3>
+                <h3 class="title-common advantages-title advantages-black-h3">Красивая<br>дорога</h3>
                 <p class="advantages-item-content advantages-black">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
               </div>
             </li>
@@ -122,7 +122,7 @@
             <!--4-->
             <li class="advantages-item advantages-item-side">
               <div class="advantages-div">
-                <h3 class="title-common advantages-title advantages-black">Мало<br>туристов</h3>
+                <h3 class="title-common advantages-title advantages-black-h3">Мало<br>туристов</h3>
                 <p class="advantages-item-content advantages-black">Большинство едет в Гранд Каньон и толпится там</p>
               </div>
             </li>
@@ -135,7 +135,7 @@
                   осмелитесь, разумеется</p>
               </div>
               <div class="advantages-wrapper">
-                <img class="advantages-item-devil_bridge" src="images/foto/catalog/advantages-2.jpg" width="800"
+                <img class="advantages-item-devil_bridge" src="images/photo/catalog/advantages-2.jpg" width="800"
                   height="385" alt="Каньон с мостом дьявола.">
               </div>
             </li>
@@ -233,7 +233,7 @@
         <!-- Телефон -->
         <section class="footer-contacts">
           <h2 class="visually-hidden">Контакты</h2>
-          <address class="footer-contacts-adress">
+          <address class="footer-contacts-address">
             <a class="footer-contacts-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
           </address>
         </section>
@@ -249,6 +249,98 @@
 
       </footer>
     </div>
+
+
+    <!-- Модальное окно -->
+
+
+    <button class="open-modal" type="button">Открыть модальное окно</button>
+    <dialog class="dialog index-modal">
+
+      <button class="close-modal modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть модальное окно</span>
+      </button>
+
+      <section class="modal-section">
+        <h2 class="modal-search-title">Поиск гостиницы в Седоне</h2>
+
+        <!-- Форма -->
+        <form class="modal-search-form" action="https://echo.htmlacademy.ru/" method="post">
+
+          <!-- Дата Заезда -->
+          <label class="modal-label modal-label-arrival">
+            <span class="modal-label-text">Дата Заезда:</span>
+            <input class="text-input modal-field" type="text" name="arrival-date" id="first-date"
+              placeholder="Укажите дату" value="27 апреля 2020" required autofocus>
+            <span class="modal-attention modal-error" aria-live="assertive">Мы не можем отправить
+              вас в прошлое.</span>
+          </label>
+
+          <!-- Дата Выезда -->
+          <label class="modal-label modal-departure">
+            <span class="modal-label-text">Дата Выезда:</span>
+            <input class="text-input modal-field" type="text" name="departure-date" id="last-date"
+              placeholder="Укажите дату" value="1 сентября 2023" required>
+            <span class="modal-attention" aria-live="assertive">На эти даты есть свободные номера. Пока
+              есть.</span>
+          </label>
+          <div class="div-wrapper-family">
+            <!-- Взрослые -->
+            <div class="modal-wrapper modal-wrapper-adults">
+              <label class="modal-label-text modal-label modal-label-margin" for="input-adults">Взрослые:</label>
+
+              <span class="modal-quantity">
+                <button class="modal-button-edit modal-button-decrease" type="button">
+                  <span class="visually-hidden">Уменьшить число на 1</span>
+                </button>
+                <input class="text-input modal-field" id="input-adults" type="number" name="adults" placeholder="1"
+                  value="2" min="1" required>
+                <button class="modal-button-edit modal-button-increase" type="button">
+                  <span class="visually-hidden">Увеличить число на 1</span>
+                </button>
+              </span>
+            </div>
+
+            <div class="modal-div-tooltip">
+
+              <!-- Дети -->
+              <span class="form-label form-label-icon">
+                <label class="modal-label-text modal-label modal-label-margin form-label"
+                  for="input-children">Дети:</label>
+
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-children">
+                    <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
+                      <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                      <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="visually-hidden">Подробности</span>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество
+                    детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются
+                    бесплатно.</span>
+                </span>
+              </span>
+            </div>
+
+            <span class="modal-quantity">
+              <button class="modal-button-edit modal-button-decrease" type="button">
+                <span class="visually-hidden">Уменьшить число на 1</span>
+              </button>
+              <input class="text-input modal-field" id="input-children" type="number" name="children" placeholder="0"
+                value="2" min="0" required>
+              <button class="modal-button-edit modal-button-increase" type="button">
+                <span class="visually-hidden">Увеличить число на 1</span>
+              </button>
+            </span>
+          </div>
+
+          <button class="button modal-button-search" type="submit">Найти</button>
+        </form>
+      </section>
+    </dialog>
+    <script src="./scripts/modal-window.js" defer></script>
+
   </body>
 
 </html>
