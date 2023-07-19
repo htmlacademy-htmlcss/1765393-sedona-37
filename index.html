@@ -178,7 +178,7 @@
           <h2 class="title-common interested-title">Заинтересовались?</h2>
           <p class="interested-content">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения
             гостиниц в Седоне</p>
-          <a class="button interested-button" href="#">Поиск гостиницы в Седоне</a>
+          <button class="button interested-button open-modal" type="button">Поиск гостиницы в Седоне</button>
         </section>
 
         <!-- Подписка -->
@@ -254,12 +254,7 @@
     <!-- Модальное окно -->
 
 
-    <button class="open-modal" type="button">Открыть модальное окно</button>
     <dialog class="dialog index-modal">
-
-      <button class="close-modal modal-close-button" type="button">
-        <span class="visually-hidden">Закрыть модальное окно</span>
-      </button>
 
       <section class="modal-section">
         <h2 class="modal-search-title">Поиск гостиницы в Седоне</h2>
@@ -337,6 +332,9 @@
 
           <button class="button modal-button-search" type="submit">Найти</button>
         </form>
+        <button class="close-modal modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть модальное окно</span>
+        </button>
       </section>
     </dialog>
     <script src="./scripts/modal-window.js" defer></script>
