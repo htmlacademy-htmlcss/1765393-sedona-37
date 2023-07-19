@@ -288,42 +288,45 @@
                 <button class="modal-button-edit modal-button-decrease" type="button">
                   <span class="visually-hidden">Уменьшить число на 1</span>
                 </button>
-                <input class="text-input modal-field" id="input-adults" type="number" name="adults" placeholder="1"
-                  value="2" min="1" required>
+                <input class="text-input modal-field text-input-people" id="input-adults" type="number" name="adults"
+                  placeholder="1" value="2" min="1" required>
                 <button class="modal-button-edit modal-button-increase" type="button">
                   <span class="visually-hidden">Увеличить число на 1</span>
                 </button>
               </span>
-            </div>
+            </div>`
 
-            <div class="modal-div-tooltip">
+            <div class="modal-wrapper modal-search-children">
 
-              <!-- Дети -->
-              <span class="form-label form-label-icon">
-                <label class="modal-label-text modal-label modal-label-margin form-label"
-                  for="input-children">Дети:</label>
+              <div class="modal-div-tooltip">
 
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-children">
-                    <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
-                      <circle cx="13" cy="13" r="13" fill="#83B3D3" />
-                      <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
-                    </svg>
-                    <span class="visually-hidden">Подробности</span>
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество
-                    детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются
-                    бесплатно.</span>
+                <!-- Дети -->
+                <span class="form-label form-label-icon">
+                  <label class="modal-label-text modal-label modal-label-margin form-label"
+                    for="input-children">Дети:</label>
+
+                  <span class="tooltip">
+                    <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-children">
+                      <svg class="tooltip-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none">
+                        <circle cx="13" cy="13" r="13" fill="#83B3D3" />
+                        <path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd" />
+                      </svg>
+                      <span class="visually-hidden">Подробности</span>
+                    </button>
+                    <span class="tooltip-text" role="tooltip" id="tooltip-children">Укажите количество
+                      детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются
+                      бесплатно.</span>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
 
             <span class="modal-quantity">
               <button class="modal-button-edit modal-button-decrease" type="button">
                 <span class="visually-hidden">Уменьшить число на 1</span>
               </button>
-              <input class="text-input modal-field" id="input-children" type="number" name="children" placeholder="0"
-                value="2" min="0" required>
+              <input class="text-input modal-field text-input-people" id="input-children" type="number" name="children"
+                placeholder="0" value="2" min="0" required>
               <button class="modal-button-edit modal-button-increase" type="button">
                 <span class="visually-hidden">Увеличить число на 1</span>
               </button>
