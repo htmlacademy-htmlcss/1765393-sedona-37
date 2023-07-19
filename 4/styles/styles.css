@@ -1018,8 +1018,6 @@ input::-webkit-inner-spin-button {
   font-weight: 700;
   line-height: 20px;
   align-items: center;
-  position: relative;
-  top: 6px
 }
 .modal-attention {
   font-size: 16px;
@@ -1044,12 +1042,13 @@ input::-webkit-inner-spin-button {
   font-size: 20px;
   line-height: 24px;
   cursor: pointer;
+  margin-top: 29px;
 }
 .modal-quantity {
-  min-width: 110px;
+  width: 110px;
   border-radius: 4px;
   background-color: #f2f2f2;
-  display: inline-block;
+  display: flex;
 }
 .modal-close-button {
   position: absolute;
@@ -1129,7 +1128,7 @@ input::-webkit-inner-spin-button {
   margin-bottom: 19px;
 }
 .modal-label-margin {
-  margin-right: 60px;
+  margin-right: 48px;
   margin-top: 10px;
 }
 .modal-div-tooltip {
@@ -1199,8 +1198,10 @@ input::-webkit-inner-spin-button {
 .modal-wrapper-adults {
   width: 247px;
   margin-right: auto;
+  display: flex;
+  align-items: center;
 }
 .div-wrapper-family {
   display: flex;
-  margin-bottom: 0 auto;
+  margin: 0 auto 18px;
 }
