@@ -204,7 +204,7 @@ body {
   display: flex;
   align-items: flex-start;
   margin: 0 70px;
-  height: 64px;
+  min-height: 64px;
   list-style-type: none;
 }
 .navigation-list,
@@ -228,7 +228,7 @@ body {
 .navigation-link-current::after {
   content: "";
   display: block;
-  margin: 20px auto 0;
+  margin: 20px auto -6px;
   box-shadow: 0 0 0 1px;
   width: 100%;
 }
